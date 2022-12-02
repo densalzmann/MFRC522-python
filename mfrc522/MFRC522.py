@@ -422,4 +422,8 @@ class MFRC522:
 
         self.Write_MFRC522(self.TxAutoReg, 0x40)
         self.Write_MFRC522(self.ModeReg, 0x3D)
+        
+        # to increase the tracking range
+        self.Write_MFRC522(self.RFCfgReg, 0x06<<4)
+        
         self.AntennaOn()
